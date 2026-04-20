@@ -1,0 +1,17 @@
+services:
+  llm-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: llm-spam-poc
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_NAME=qwen2.5:0.5b
+      - FASTAPI_PORT=8000
+    volumes:
+      - ollama_models:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_models:
