@@ -10,6 +10,7 @@
 - FastAPI-обертка с единым endpoint для пересылки запроса в Ollama:
   - `POST /generate`
 - Порт FastAPI проброшен наружу через Docker Compose (`8000:8000`).
+- Краткое исследование техник промптинга. ( `PROMPT_ANALYSIS` )
 
 ## Файлы проекта
 
